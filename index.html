@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JavaScript quiz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/normalize.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+</head>
+<body>
+    <header>
+        <div id="highscoreView">
+            <h1>View Highscores</h1>
+        </div>
+        <div id="timerView" >
+            <h1>Timer</h1>
+        </div>
+
+    </header>
+    <main>
+        <div id="startInfo">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer following code-related questions within the time limit. Keep in mind that incorrect answer will penalize you time by 10 seconds!</p>
+            <input type="button" value="Start Quiz" id="startButton">
+        </div>
+        <div id="allDone">
+            <h1>All done</h1>
+            <p>final score: x</p>
+            <input type="text" name="initials" id="initials">
+            <input type="button" value="Submit" id="initialsSubmitButton">
+        </div>
+        <div id="fillScore">
+            <h1>Highscores</h1>
+            <ul id="highScoreList">
+                <li>JM</li>
+            </ul>
+             <input type="button" value="Go Back" id="highScoreGoBackButton">
+             <input type="button" value="Clear list" id="highScoreClearButton">
+        </div>
+        <div id="questionShow">
+            <h1>Question</h1>
+        </div>
+        <div id="answersShow">
+           <!-- <p>answers</p>
+           <p>answers</p>
+           <p>answers</p>
+           <p>answers</p> -->
+        </div>
+        <div id="correctOrWrong" >
+            <p>Correct / Wrong</p>
+        </div>
+    </main>
+    
+    <script src='./assets/js/main.js'></script>
+</body>
+</html>

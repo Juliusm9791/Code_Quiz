@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+#highscoreView, #timerView{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    flex: 1;
+} 
+
+#startInfo {
+    max-width: 50%;
+    height: 200px;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    flex: 1;
+}
+
+#questionShow, #answersShow, #correctOrWrong, #allDone , #fillScore{
+    /* display: none; */
+    max-width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    flex: 1;
+}
+#answersShow {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-top: 20px;
+}
