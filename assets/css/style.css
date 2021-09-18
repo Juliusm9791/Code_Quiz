@@ -1,20 +1,56 @@
+:root {
+    --backColor1: #98cb00;
+    --backColor2: #cc6733;
+    --backColor3: #3398cc;
+  }
+  body {
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
 header {
     display: flex;
     justify-content: space-between;
+    background-color: var(--backColor3);
+    color: white;
+    font-size: 25px;
 }
 main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
+    align-content: flex-start;
 }
+p {
+line-height: 1.5;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 30px;
+    color: var(--backColor3);
+    }
 
 #highscoreView, #timerView{
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
     flex: 1;
 } 
+#timerView{ 
+    text-align: center;
+}
+
+#highscoreView a{
+    text-decoration: none;
+    text-align: left;
+    color: white;
+}
+
+#highscoreView a:hover{
+    color: var(--backColor1);
+}
 
 #startInfo {
     max-width: 50%;
@@ -22,7 +58,6 @@ main {
     display: block;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
     flex: 1;
 }
 
@@ -34,11 +69,48 @@ main {
     /* border: 1px solid black; */
     flex: 1;
 }
-#answerButtons {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding-top: 20px;
+#questionShow, #answerButtons{
+    text-align: left;
+    font-weight: bold;
+}
+.amswButtons {
+    background-color: var(--backColor3);
+    padding: 5px; 
+    margin: 5px; 
+    display: block;
+    color: wheat;
+    border-radius: 3px;
+    border-style: none ;
+}
+
+.amswButtons:hover {
+    cursor: grab;
+    background-color: #55baff;
+
+}
 
 
+
+input {
+    display: inline;
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--backColor2);
+    border-radius: 15px;
+    color: white;
+}
+
+input:hover {
+    background-color: #aa4511;
+    cursor: grab;
+}
+#initials {
+    background-color: white;
+    color: black;
+    border-radius: 1px;
+}
+#initials:hover{
+    background-color: white;
+    cursor: text;
 }

@@ -17,8 +17,8 @@ let initials = document.querySelector("#initials");
 
 allDone.style.display = "none";
 let timer = 0;
-let secconds = 50;
-let questionTime = secconds;
+// let secconds = 50;
+// let secconds = ;
 let randomNr;
 let correctAnswer;
 
@@ -32,15 +32,23 @@ let score = {
 let scoresArray = [];
 scoresArray = JSON.parse(localStorage.getItem("scoresArray"));
 if (scoresArray === null) {
-     scoresArray = [];
-    }
+    scoresArray = [];
+}
+
 
 // Quiz questions / answers - correct
-let quizArrayOriginal= [{'question': 'first', 'answers': ["one1", "two1", "three1", "fffffffffour1", 0]},
-                        {'question': 'second', 'answers': ["ooooooooooone2", "two2", "three2", "four2", 1]},
-                        {'question': 'third', 'answers': ["one3", "ttttttttttttwo3", "three3", "four3", 2]},
-                        {'question': 'fourth', 'answers': ["one4", "two4", "tttttttttthree4", "four4", 3]},];
+let quizArrayOriginal= [{'question': 'Inside which HTML element do we put the JavaScript?', 
+                        'answers': ["<scripting>", "<js>", "<script>", "<javascript>", 2]},
+                        {'question': 'How to write an IF statement in JavaScript?', 
+                        'answers': ["if i = 5 then", "if i == 5 then", "if i = 5", "if (i == 5)", 3]},
+                        {'question': 'How does a FOR loop start?', 
+                        'answers': ["for(i = 0; i < 5; i++)", "for(i = 0; i <= 5)", "for(i <= 5; i++)", "for i = 1 to 5", 0]},
+                        {'question': 'How do you find the number with the highest value of x and y?', 
+                        'answers': ["Math.celi(x,y)", "Math.max(x,y)", "top(x,y)", "celi(x,y)", 1]},
+                        {'question': 'How do you round the number 7.25, to the nearest integer?', 
+                        'answers': ["Math.round(7.25)", "Math.rnd(7.25)", "rnd(7.25)", "round(7.25)", 0]},];
 
+let questionTime = quizArrayOriginal.length * 10;
 // making a quiz array copy to work with
 let quizArray = [];
 quizArray.push.apply(quizArray, quizArrayOriginal);
@@ -53,12 +61,14 @@ answerButtons.addEventListener("click", function(event) {
             let state = button.getAttribute("data-state");
             if (state === "true") {
                 correctOrWrong.appendChild(createHTMLelement("Correct", "p"));
-                // showCorrectWrongMessage();
+                correctOrWrong.children[0].setAttribute("style", "color: green");
+                button.setAttribute("style", "background-color: #98cb00")
                 score.correctAnsw++;
                 showCorrectWrongMessageDelay();
             } else {              
                 correctOrWrong.appendChild(createHTMLelement("Wrong", "p"));
-                // showCorrectWrongMessage();
+                correctOrWrong.children[0].setAttribute("style", "color: red");
+                button.setAttribute("style", "background-color: #cc6733")
                 questionTime -= 10;
                 score.wrongAnsw++;
                 showCorrectWrongMessageDelay();
@@ -68,7 +78,7 @@ answerButtons.addEventListener("click", function(event) {
 
 // message corect or wrong answer
 function showCorrectWrongMessageDelay() {
-    correctOrWrong.style.borderTop = "1px solid #505050";
+    correctOrWrong.style.borderTop = "1px solid #3398cc";
     if (quizArray.length === 0) {
         setTimeout(() =>{
             correctOrWrong.innerHTML = "";
@@ -156,6 +166,7 @@ function writeScore () {
             score.player = document.getElementById("initials").value;
             scoresArray.push(score);
             localStorage.setItem("scoresArray", JSON.stringify(scoresArray));
+            initials.value = "";
             location.href = "./assets/html/highscore.html";
         }     
     });
@@ -171,6 +182,7 @@ function ifNoMoreQuestions(){
     writeScore ();
     clearInterval(timer);
     finalScore.textContent = score.timeScore;
+    removingChildrens(timerView);
     allDone.style.display = "block";
     questionShow.style.display = "none";
     answerButtons.style.display = "none";

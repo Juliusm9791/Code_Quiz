@@ -1,0 +1,44 @@
+:root {
+    --backColor1: #98cb00;
+    --backColor2: #cc6733;
+    --backColor3: #3398cc;
+  }
+
+body {
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-width: 250px;
+}
+
+h1 {
+padding: 20px;
+font-size: 30px;
+color: var(--backColor3);
+}
+
+input {
+    display: inline;
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--backColor2);
+    border-radius: 15px;
+    color: white;
+}
+table th, td {
+    background-color: var(--backColor3);
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+}
+.noback{
+    background-color: white
+}
+
+input:hover {
+    background-color: #aa4511;
+    cursor: grab;
+}
