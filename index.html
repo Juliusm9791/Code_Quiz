@@ -3,18 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>JavaScript quiz</title>
+    <title>JavaScript Quiz</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/normalize.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
 </head>
 <body>
     <header>
         <div id="highscoreView">
-            <h1>View Highscores</h1>
+            <a href="./assets/html/highscore.html">View Highscores</a>
         </div>
         <div id="timerView" >
-            <h1>Timer</h1>
+            <!-- <h1>Timer</h1> -->
         </div>
 
     </header>
@@ -26,32 +26,17 @@
         </div>
         <div id="allDone">
             <h1>All done</h1>
-            <p>final score: x</p>
-            <input type="text" name="initials" id="initials">
+            <p>Final score: <span id="finalScore"></span></p>
+            <label for="initials">Name:</label>
+            <input type="text" name="initials" id="initials" placeholder="Name">
             <input type="button" value="Submit" id="initialsSubmitButton">
         </div>
-        <div id="fillScore">
-            <h1>Highscores</h1>
-            <table id="highScoreList">
-                <tr>
-                    <th>1</th> <th>2</th> <th>3</th> <th>4</th>
-                </tr>
-                <tr>
-                    <td></td><td></td><td></td><td></td>
-                </tr>
-                
-            </table>
-             <input type="button" value="Go Back" id="highScoreGoBackButton">
-             <input type="button" value="Restart" id="restartButton">
-        </div>
         <div id="questionShow">
-            <h1>Question</h1>
-        </div>
+         </div>
         <div id="answerButtons">
         </div>
         <div id="correctOrWrong" >
             <th></th>
-            <!-- <p>Correct / Wrong</p> -->
         </div>
     </main>
     

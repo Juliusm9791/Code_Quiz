@@ -1,0 +1,103 @@
+/* Resets the box size of every element */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gives the body element a parent height to compare against */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+ font-size: 100%;
+}
+
+/* Matches the font of special elements to the rest of the page */
+input, select, option, optgroup, textarea, button,
+pre, code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* Removes default bullet points from lists */
+ol, ul {
+  list-style: none; 
+}
+ header {
+  padding: 20px;
+  width: 100%; 
+ }
+header h1 {
+  display: inline;
+  font-size: 25px;
+  padding: 10px;
+ }
+
+header nav{
+  float: right;
+  align-items: center;
+  padding: 10px;
+}
+
+ header nav ul li {
+   display: inline;
+   text-align: left;
+   }
+
+
+header nav ul li a {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  }
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: turquoise;
+    border: 1px solid black;
+    flex: 3 0 300px;
+    order: 2;
+}
+article {
+   border: 2px solid brown;
+   flex: 1 0 300px;
+}
+  
+  article h2 {
+    font-size: 20px;
+    padding: 20px;
+    margin: auto;
+  }
+  article p, ul, li {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  aside {
+   background-color: thistle;
+  flex: 1 0 100px;
+  order: 1;
+  }
+
+  footer {
+    background-color: wheat;
+    text-align: center;
+    font-size: 10px;
+    padding: 20px;
+  }
