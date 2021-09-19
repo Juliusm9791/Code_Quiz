@@ -17,8 +17,6 @@ let initials = document.querySelector("#initials");
 
 allDone.style.display = "none";
 let timer = 0;
-// let secconds = 50;
-// let secconds = ;
 let randomNr;
 let correctAnswer;
 
@@ -34,7 +32,6 @@ scoresArray = JSON.parse(localStorage.getItem("scoresArray"));
 if (scoresArray === null) {
     scoresArray = [];
 }
-
 
 // Quiz questions / answers - correct
 let quizArrayOriginal= [{'question': 'Inside which HTML element do we put the JavaScript?', 
@@ -62,13 +59,17 @@ answerButtons.addEventListener("click", function(event) {
             if (state === "true") {
                 correctOrWrong.appendChild(createHTMLelement("Correct", "p"));
                 correctOrWrong.children[0].setAttribute("style", "color: green");
-                button.setAttribute("style", "background-color: #98cb00")
+                button.setAttribute("style", "background-color: #98cb00");
+                let audioPlay1 = new Audio('./assets/sound/tada.wav');
+                audioPlay1.play();
                 score.correctAnsw++;
                 showCorrectWrongMessageDelay();
             } else {              
                 correctOrWrong.appendChild(createHTMLelement("Wrong", "p"));
                 correctOrWrong.children[0].setAttribute("style", "color: red");
-                button.setAttribute("style", "background-color: #cc6733")
+                button.setAttribute("style", "background-color: #cc6733");
+                let audioPlay2 = new Audio('./assets/sound/chord.wav');
+                audioPlay2.play();
                 questionTime -= 10;
                 score.wrongAnsw++;
                 showCorrectWrongMessageDelay();
@@ -84,7 +85,7 @@ function showCorrectWrongMessageDelay() {
             correctOrWrong.innerHTML = "";
             correctOrWrong.style.borderTop = "0px";
             ifNoMoreQuestions();
-        },500);
+        },300);
     } else {
         // let inactiveButtons = document.querySelectorAll(".amswButtons");
         // for (i = 0; i < inactiveButtons.length; i++) {
@@ -95,7 +96,7 @@ function showCorrectWrongMessageDelay() {
             correctOrWrong.innerHTML = "";
             correctOrWrong.style.borderTop = "0px";
             startNextQuestion();
-        },500);
+        },300);
     }
 }
 
@@ -107,13 +108,16 @@ function startTimer () {
     timerView.append(createHTMLelement(questionTime + " second(s) remaining", "p"));
     timer = setInterval(() => {
         questionTime--;
+        if (questionTime < 10) {
+            let audioPlay1 = new Audio('./assets/sound/clock.wav');
+            audioPlay1.play();
+        }
         timerView.innerHTML = questionTime + " second(s) remaining";
         if (questionTime <= 0) {
             ifNoMoreQuestions()
         } 
     }, 1000);
 }
-
 
 function createHTMLelement(x,elem) {
     let newElement = document.createElement(elem); 
@@ -162,6 +166,7 @@ function writeScore () {
     initialsSubmitButton.addEventListener("click", function() {
         if (document.getElementById("initials").value.trim() < 1){
             allDone.appendChild(createHTMLelement("You need to enter name", "p"));
+            allDone.lastChild.setAttribute("style", "color: red");
         } else {
             score.player = document.getElementById("initials").value;
             scoresArray.push(score);
@@ -179,7 +184,7 @@ function ifNoMoreQuestions(){
     } else {
         score.timeScore = questionTime;
     }
-    writeScore ();
+    writeScore();
     clearInterval(timer);
     finalScore.textContent = score.timeScore;
     removingChildrens(timerView);
@@ -187,6 +192,5 @@ function ifNoMoreQuestions(){
     questionShow.style.display = "none";
     answerButtons.style.display = "none";
     correctOrWrong.style.display = "none";
-    // initials.value = "";
 }
 

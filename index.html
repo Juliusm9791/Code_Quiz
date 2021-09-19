@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>JavaScript Quiz</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/normalize.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
 </head>
 <body>
@@ -13,32 +13,36 @@
         <div id="highscoreView">
             <a href="./assets/html/highscore.html">View Highscores</a>
         </div>
-        <div id="timerView" >
+        <div id="timerView">
             <!-- <h1>Timer</h1> -->
         </div>
 
     </header>
     <main>
-        <div id="startInfo">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer following code-related questions within the time limit. Keep in mind that incorrect answer will penalize you time by 10 seconds!</p>
-            <input type="button" value="Start Quiz" id="startButton">
-        </div>
-        <div id="allDone">
-            <h1>All done</h1>
-            <p>Final score: <span id="finalScore"></span></p>
-            <label for="initials">Name:</label>
-            <input type="text" name="initials" id="initials" placeholder="Name">
-            <input type="button" value="Submit" id="initialsSubmitButton">
-        </div>
-        <div id="questionShow">
-         </div>
-        <div id="answerButtons">
-        </div>
-        <div id="correctOrWrong" >
-        </div>
+        <section>        
+            <div id="startInfo">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer following code-related questions within the time limit. Keep in mind that incorrect answer will penalize you time by 10&nbsp;seconds!</p>
+                <input type="button" value="Start Quiz" id="startButton">
+            </div>
+            <div id="allDone">
+                <h1>All done</h1>
+                <p>Final score: <span id="finalScore"></span></p>
+                <label for="initials">Name:</label>
+                <input type="text" name="initials" id="initials" placeholder="Name">
+                <input type="button" value="Submit" id="initialsSubmitButton">
+        </section>
+        <section>
+            </div>
+            <div id="questionShow">
+            </div>
+            <div id="answerButtons">
+            </div>
+            <div id="correctOrWrong" >
+            </div>
+        </section>
     </main>
-    
+        
     <script src='./assets/js/main.js'></script>
 </body>
 </html>

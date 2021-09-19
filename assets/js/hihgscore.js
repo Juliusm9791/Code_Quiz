@@ -14,6 +14,7 @@ if (scoresArray === null) {
 scoresArray.sort((a, b) => b.timeScore - a.timeScore);
 generateHigsoreTable();
 
+// Creating score table
 function generateHigsoreTable(){
 for (i = 0; i < scoresArray.length; i++){
     if (i <= (topScoreList - 1)) {

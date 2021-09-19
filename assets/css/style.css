@@ -8,7 +8,7 @@
     padding: 10px;
     width: auto;
     font-family: Arial, Helvetica, sans-serif;
-    }
+        }
 
 header {
     display: flex;
@@ -16,15 +16,26 @@ header {
     background-color: var(--backColor3);
     color: white;
     font-size: 25px;
+    margin: 10px;
 }
+
+header p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: space-around;
 }
-p {
-line-height: 1.5;
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 50%;
 }
 
 h1 {
@@ -36,7 +47,6 @@ h1 {
 #highscoreView, #timerView{
     margin: 10px;
     padding: 10px;
-    flex: 1;
 } 
 #timerView{ 
     text-align: center;
@@ -46,28 +56,31 @@ h1 {
     text-decoration: none;
     text-align: left;
     color: white;
+    margin: 0px;
+    padding: 0pc;
+    display: block;
 }
 
 #highscoreView a:hover{
     color: var(--backColor1);
 }
 
-#startInfo {
-    max-width: 50%;
+#startInfo, #allDone  {
     height: 200px;
     display: block;
     margin: 10px;
     padding: 10px;
-    flex: 1;
 }
 
-#questionShow, #answerButtons, #correctOrWrong, #allDone , #fillScore{
-    /* display: none; */
-    max-width: 50%;
+#allDone p {
+    font-size: 20px;
+    color: var(--backColor2);
+    font-weight: bold;
+}
+
+#questionShow, #answerButtons, #correctOrWrong, #fillScore{
     margin: 10px;
     padding: 10px;
-    /* border: 1px solid black; */
-    flex: 1;
 }
 #questionShow, #answerButtons{
     text-align: left;
@@ -86,10 +99,7 @@ h1 {
 .amswButtons:hover {
     cursor: grab;
     background-color: #55baff;
-
 }
-
-
 
 input {
     display: inline;
@@ -108,9 +118,19 @@ input:hover {
 #initials {
     background-color: white;
     color: black;
-    border-radius: 1px;
+    border-radius: 0px;
 }
 #initials:hover{
     background-color: white;
     cursor: text;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 100%;
+    }
+
+    header {
+        font-size: 18px;
+    }
 }
