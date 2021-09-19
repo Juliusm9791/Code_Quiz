@@ -40,7 +40,7 @@ table th, td {
 
 input:hover {
     background-color: #aa4511;
-    cursor: grab;
+    /* cursor: grab; */
 }
 #inputButtons {
     text-align: justify;

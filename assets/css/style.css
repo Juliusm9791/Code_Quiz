@@ -97,7 +97,7 @@ h1 {
 }
 
 .amswButtons:hover {
-    cursor: grab;
+    /* cursor: grab; */
     background-color: #55baff;
 }
 
@@ -113,7 +113,7 @@ input {
 
 input:hover {
     background-color: #aa4511;
-    cursor: grab;
+    /* cursor: grab; */
 }
 #initials {
     background-color: white;

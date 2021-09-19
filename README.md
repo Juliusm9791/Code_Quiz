@@ -22,7 +22,10 @@ https://juliusm9791.github.io/04-Web-APIs-Code-Quiz/
 
 ## Mock-Up
 The following images shows the web application's appearance and functionality:
-
+![Code-Quiz-Start](./assets/images/main.jpg)
+![Code-Quiz-Question](./assets/images/question.jpg)
+![Code-Quiz-All](./assets/images/done.jpg)
+![Code-Quiz-High-Score](./assets/images/high.jpg)
 
 
 © 2021 Julius Markauskas
