@@ -87,11 +87,6 @@ function showCorrectWrongMessageDelay() {
             ifNoMoreQuestions();
         },300);
     } else {
-        // let inactiveButtons = document.querySelectorAll(".amswButtons");
-        // for (i = 0; i < inactiveButtons.length; i++) {
-        //     inactiveButtons[i].disable = true;     
-        // }
-        // console.log(inactiveButtons);
         setTimeout(() =>{
             correctOrWrong.innerHTML = "";
             correctOrWrong.style.borderTop = "0px";
@@ -176,7 +171,6 @@ function writeScore () {
         }     
     });
 }
-
 
 function ifNoMoreQuestions(){
     if (questionTime < 0) {

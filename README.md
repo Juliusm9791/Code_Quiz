@@ -11,7 +11,7 @@ If the answer is incorrect, then time is subtracted.
 
 If all questions are answered or the timer reaches 0, then the game is over.
 
-After the game you can enter yuor Name, and it will store result.
+After the game you can enter your Name, and it will store result.
 
 
 You can view High Score result by clickig "View Highscores" link on header.
