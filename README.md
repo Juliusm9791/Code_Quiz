@@ -18,7 +18,7 @@ You can view High Score result by clickig "View Highscores" link on header.
 
 
 ## Link to website
-https://juliusm9791.github.io/04-Web-APIs-Code-Quiz/
+https://juliusm9791.github.io/Code_Quiz/
 
 ## Mock-Up
 The following images shows the web application's appearance and functionality:
