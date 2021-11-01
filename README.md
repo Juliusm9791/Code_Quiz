@@ -1,4 +1,4 @@
-# 04-Web-APIs-Code-Quiz
+# Code-Quiz
 
 This is timed quiz on JavaScript fundamentals that stores high scores.
 
